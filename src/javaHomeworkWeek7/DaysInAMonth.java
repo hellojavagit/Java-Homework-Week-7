@@ -48,9 +48,11 @@ public class DaysInAMonth {
                     daysinmonth = 31;
                     break;
                 case 2:
-                    monthname = "february";
-                    if ((year % 400 ==0 ||  year % 4 == 0))
+                    //monthname = "february";
+                    if ( b == true ){
+                   
                         daysinmonth = 29;
+                    }
                     else
                     {
                         daysinmonth = 28;
