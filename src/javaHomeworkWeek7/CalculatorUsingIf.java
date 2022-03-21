@@ -5,29 +5,46 @@ import java.util.Scanner;
 
 public class CalculatorUsingIf {
     public static void main(String[] args) {
-        Calculator();
-    }
-
-    public static void Calculator() {
-        int a, b;
-        String symbol;
-        System.out.println("Enter two numbers ");
         Scanner sc = new Scanner(System.in);
-        a= sc.nextInt();
-        b = sc.nextInt();
-
-        System.out.println(" Enter symbol for operation to perform ");
-        symbol = sc.nextLine();
-
-        if (symbol == "+")
+        float num1,num2,result;
+        char ch;
+        System.out.println("Enter two Numbers ");
+        num1 = sc.nextFloat();// accepts float number as input
+        num2 = sc.nextFloat();
+        System.out.println("Enter the operator");
+        ch = sc.next().charAt(0);//accepts a character as input
+        if (ch == '+')
         {
-            System.out.println(" Addiiton of two numbers " + a + "," + b + "is:" + (a + b));
-        } else if (symbol == "-") {
-            System.out.println(" Subtraction of two numbers " + a + "," + b + "is:" + (a - b));
-        } else if (symbol =="*" ) {
-            System.out.println(" Multiplication  of two numbers " + a + "," + b + "is:" + (a + b));
-        } else if (symbol == "/") {
-            System.out.println(" Division of two numbers " + a + "," + b + "is:" + (a + b));
+            result = num1 + num2 ;
+            System.out.println("Addition of 2 numbers is :" + result);
+        }else if (ch == '-')
+        {
+            result = num1-num2 ;
+            System.out.println("Subtraction of 2 numbers is :" + result);
+        }else if(ch == '*')
+        {
+           result = num1 * num2 ; 
+            system.out.println("Multiplication of 2 numbers is :" + result);
+        } else if (ch == '/')
+        {
+            result = num1/num2 ;
+            system.out.println("Division of 2 numbers is :" + result);
         }
-    }
-}
+        else
+        {
+            system.out.println(("Enter correct operator");
+            return;
+                               
+           }
+     }
+  }
+            
+            
+        
+       
+        
+        
+    
+
+
+   
